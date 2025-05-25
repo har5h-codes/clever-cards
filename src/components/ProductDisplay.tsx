@@ -71,11 +71,12 @@ const Card: React.FC<CardProps> = ({ title, description, image }) => {
 export function ProductDisplay() {
     return (
         <div className="flex flex-col items-center justify-center px-4 py-8">
-            <h1 className="text-5xl font-bold text-white text-center mb-10 leading-tight">
-                Want to Use CleverCards for
-                <br />
-                Your Own Business?
+            <h1 className="text-4xl font-bold text-white text-center mb-6 leading-tight">
+                Issue CleverCards directly without the platform
             </h1>
+            <p className="text-gray-300 max-w-5xl mx-auto text-lg px-4 mb-7">
+                For businesses that don’t need a full platform integration, CleverCards Direct allows you to issue ready-to-use digital Mastercards for employee benefits, business expenses and payouts — no technical setup or integration required.
+            </p>
             <div className="flex flex-col md:flex-row gap-4 w-full max-w-full justify-center items-stretch">
                 <Card
                     title={["Employee", "Benefits Cards"]}
