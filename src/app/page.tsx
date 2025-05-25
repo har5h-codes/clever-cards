@@ -83,11 +83,11 @@ export default function Home() {
           ref={statsRef}
         />
         <TrustSection/>
-        <ReviewsSection />
+      
         <HeroSection />
         <UseCasesSection />
         <ProductDisplaySection />
-        <ReferralSection />
+        <ReviewsSection />
         <LandingPageSection />
         <FooterSection />
       </div>
