@@ -1,0 +1,13 @@
+---
+description: This rule ensures that whenever website changes are requested, Cursor automatically uses the browser MCP tool to implement and verify changes on localhost:3000. The rule helps maintain quality by visually confirming that modifications appear as expected.
+globs: 
+alwaysApply: false
+---
+1. Detect website change requests in user messages
+2. Open browser MCP tool pointing to localhost:3000
+3. Apply requested changes to the website
+4. Capture a screenshot of the modified page
+5. Verify changes are properly displayed
+6. Provide visual confirmation to the user
+7. Ask for user approval of the changes
+8. Run website tests if available
