@@ -15,7 +15,7 @@ import { useRef } from "react";
 // import WhyCleverCardSection from "@/components/sections/WhyCleverCardSection";
 import HeroSection from "@/components/sections/FasterToMarket";
 import UseCasesSection from "@/components/sections/UseCasesSection";
-
+import PlatformCarousel from "@/components/sections/PlatformCarousel";
 
 export default function Home() {
   // Globe config and arcs data (from GlobeDemo, but tailored for CleverCards)
@@ -83,9 +83,9 @@ export default function Home() {
           ref={statsRef}
         />
         <TrustSection/>
-      
-        <HeroSection />
+        <PlatformCarousel />
         <UseCasesSection />
+        <HeroSection />
         <ProductDisplaySection />
         <ReviewsSection />
         <LandingPageSection />
