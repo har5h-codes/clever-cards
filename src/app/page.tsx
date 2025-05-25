@@ -62,7 +62,7 @@ export default function Home() {
   ];
 
   const heroRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
+  const trustRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -74,20 +74,17 @@ export default function Home() {
         globeConfig={globeConfig}
         sampleArcs={sampleArcs}
         heroRef={heroRef}
-        statsRef={statsRef  }
+        statsRef={trustRef}
       />
       <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden pt-8 pb-4">
         <Hero ref={heroRef} />
         <Endorsements />
-        <Stats
-          ref={statsRef}
-        />
-        <TrustSection/>
+        <TrustSection ref={trustRef}/>
         <HeroSection />
         <BelowBento />
         <Testimonial />
         <PlatformCarousel />
-       
+        
         
         <ProductDisplaySection />
         <ReviewsSection />

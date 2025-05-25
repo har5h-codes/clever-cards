@@ -14,7 +14,7 @@ export default function GlobeBackground({
   globeConfig,
   sampleArcs,
   heroRef,
-  statsRef
+  statsRef: trustRef
 }: {
   globeConfig: GlobeConfig;
   sampleArcs: Position[];
@@ -24,25 +24,25 @@ export default function GlobeBackground({
   const globeAnimRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!globeAnimRef.current || !heroRef.current || !statsRef.current) return;
+    if (!globeAnimRef.current || !heroRef.current || !trustRef.current) return;
 
     const globe = globeAnimRef.current;
     const hero = heroRef.current;
-    const stats = statsRef.current;
-    const statsGlobe = stats.querySelector('#globe-placeholder');
-    if (!statsGlobe) return;
+    const trust = trustRef.current;
+    // The BentoGrid is the first child of TrustSection
+    const bentoGrid = trust.querySelector('#bento-grid-section');
+    if (!bentoGrid) return;
 
     // Get bounding rects and absolute positions
     const heroRect = hero.getBoundingClientRect();
-    const statsRect = statsGlobe.getBoundingClientRect();
+    const bentoRect = bentoGrid.getBoundingClientRect();
     const scrollY = window.scrollY || window.pageYOffset;
     const viewportHeight = window.innerHeight;
 
     // Calculate absolute top positions
     const heroAbsTop = heroRect.top + scrollY;
-    const statsAbsTop = statsRect.top + scrollY;
-    const statsAbsCenter = statsAbsTop + statsRect.height / 2;
-    // const heroAbsTopCenter = heroAbsTop + heroRect.height / 2;
+    const bentoAbsTop = bentoRect.top + scrollY;
+    const bentoAbsCenter = bentoAbsTop + bentoRect.height / 2;
 
     // Calculate initial and final positions/sizes
     const start = {
@@ -52,21 +52,17 @@ export default function GlobeBackground({
       h: heroRect.height
     };
     const end = {
-      x: statsRect.left + statsRect.width / 2,
-      y: statsRect.top + statsRect.height / 2,
-      w: statsRect.width,
-      h: statsRect.height
+      x: bentoRect.left + bentoRect.width / 2,
+      y: bentoRect.top + bentoRect.height / 2,
+      w: bentoRect.width,
+      h: bentoRect.height
     };
 
-    // Calculate scale and translation
-    // const scaleX = end.w / start.w;
-    // const scaleY = end.h / start.h;
     const translateX = end.x - start.x;
-    const translateY = end.y - start.y; 
+    const translateY = end.y - start.y;
 
-    // Calculate the scroll distance so that the center of statsGlobe is at the center of the viewport
-    // Use absolute positions for robustness
-    const scrollEnd = (statsAbsCenter - heroAbsTop) - (viewportHeight / 2) + (end.h / 2);
+    // Calculate the scroll distance so that the center of bentoGrid is at the center of the viewport
+    const scrollEnd = (bentoAbsCenter - heroAbsTop) - (viewportHeight / 2) + (end.h / 2);
 
     // Set initial state
     gsap.set(globe, {
@@ -93,7 +89,7 @@ export default function GlobeBackground({
       y: translateY + 150,
       scaleX: 0.85,
       scaleY: 0.85,
-      opacity: 1,
+      opacity: 0.2, // Fade out as it moves behind the BentoGrid
       ease: 'power1.inOut',
     });
 
@@ -109,7 +105,7 @@ export default function GlobeBackground({
       ScrollTrigger.getAll().forEach(t => t.kill());
       window.removeEventListener('resize', handleResize);
     };
-  }, [heroRef, statsRef]);
+  }, [heroRef, trustRef]);
 
   return (
     <div ref={globeAnimRef} className="absolute left-0 top-0 w-full h-screen z-0 pointer-events-none select-none">
