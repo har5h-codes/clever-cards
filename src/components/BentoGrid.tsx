@@ -4,25 +4,25 @@ import gsap from "gsap";
 import Image from 'next/image';
 
 const BentoGrid = () => {
-    // Ref for the phone image in Tax Free Benefits card
+    // Ref for the phone image in Instant Issuance card
     const phoneImgRef = useRef<HTMLImageElement>(null);
     const cardRef = useRef<HTMLDivElement>(null);
     const maskRef = useRef<HTMLDivElement>(null);
     const [phoneImgLoaded, setPhoneImgLoaded] = useState(false);
 
-    // --- Business Expenses Animation ---
+    // --- Smart Controls & Restrictions Animation ---
     const businessCardRef = useRef<HTMLDivElement>(null);
     const leftImgRef = useRef<HTMLImageElement>(null);
     const rightImgRef = useRef<HTMLImageElement>(null);
 
-    // Employee Gift Cards animation
+    // White-Label & API Integration animation
     const giftCardRef1 = useRef<HTMLImageElement>(null);
     const giftCardRef2 = useRef<HTMLImageElement>(null);
     const giftCardRef3 = useRef<HTMLImageElement>(null);
     const giftCardRefs = useMemo(() => [giftCardRef1, giftCardRef2, giftCardRef3], []);
     const giftCardContainerRef = useRef<HTMLDivElement>(null);
 
-    // Real-Time Payments Animation
+    // Global Payout Infrastructure Animation
     const realTimeCardRef = useRef<HTMLDivElement>(null);
     const realTimeImgRef = useRef<HTMLImageElement>(null);
     const realTimeRingRef = useRef<HTMLImageElement>(null);
@@ -65,7 +65,7 @@ const BentoGrid = () => {
         };
     }, [phoneImgLoaded]);
 
-    // Business Expenses animation
+    // Smart Controls & Restrictions animation
     useEffect(() => {
         const card = businessCardRef.current;
         const leftImg = leftImgRef.current;
@@ -132,7 +132,7 @@ const BentoGrid = () => {
         };
     }, []);
 
-    // Employee Gift Cards CardStack-style hover animation
+    // White-Label & API Integration CardStack-style hover animation
     useEffect(() => {
         const container = giftCardContainerRef.current;
         const [card1, card2, card3] = giftCardRefs.map(ref => ref.current);
@@ -172,7 +172,7 @@ const BentoGrid = () => {
         };
     }, [giftCardRefs]);
 
-    // Real-Time Payments Animation
+    // Global Payout Infrastructure Animation
     useEffect(() => {
         const card = realTimeCardRef.current;
         const img = realTimeImgRef.current;
@@ -234,7 +234,7 @@ const BentoGrid = () => {
             <div className="max-w-7xl w-full grid grid-cols-12 gap-4">
                 {/* Left column group - spans 8 columns */}
                 <div className="col-span-7 space-y-4">
-                    {/* Tax Free Benefits */}
+                    {/* Instant Issuance */}
                     <div
                         ref={cardRef}
                         className="bg-transparent rounded-xl overflow-hidden relative h-[481px] group"
@@ -244,10 +244,9 @@ const BentoGrid = () => {
                     >
                         <div className="p-6 text-white h-full flex flex-col justify-between">
                             <div>
-                                <h2 className="text-2xl font-bold mb-2">Tax free Benefits</h2>
+                                <h2 className="text-2xl font-bold mb-2">Instant Issuance</h2>
                                 <p className="text-gray-300">
-                                    Adding CleverCards Mastercards to your phone is as easy as
-                                    adding a boarding pass.
+                                    Create and distribute digital cards in seconds- branded, restricted, single-use or multi-use- tailored to your needs.
                                 </p>
                             </div>
                             <div className="flex justify-center">
@@ -262,7 +261,7 @@ const BentoGrid = () => {
                                         src="/1x1.png"
                                         alt="Phone with card"
                                         width={420}
-                                        height={420} 
+                                        height={420}
                                         className="object-contain w-full"
                                         style={{ display: "block" }}
                                         aria-hidden="true"
@@ -273,7 +272,7 @@ const BentoGrid = () => {
                         </div>
                     </div>
 
-                    {/* Real-Time Payments */}
+                    {/* Global Payout Infrastructure */}
                     <div
                         ref={realTimeCardRef}
                         className="bg-transparent rounded-xl overflow-hidden h-[259px] relative"
@@ -288,9 +287,9 @@ const BentoGrid = () => {
 
                         <div className="pt-6 pl-6 text-white h-full flex justify-between items-center">
                             <div className="max-w-[50%]">
-                                <h2 className="text-xl font-bold mb-2">Real-Time Payments</h2>
+                                <h2 className="text-xl font-bold mb-2">Global Payout Infrastructure</h2>
                                 <p className="text-gray-300 text-sm">
-                                    Quickly launch with an affordable and efficient real-time payment platform
+                                    Send funds to anyone, no matter where they are. No bank accounts needed. Built for scale and compliance.
                                 </p>
                             </div>
                             <div className="relative w-[300px] h-full flex items-center justify-center">
@@ -322,7 +321,7 @@ const BentoGrid = () => {
 
                 {/* Right column group - spans 4 columns */}
                 <div className="col-span-5 space-y-4">
-                    {/* Business Expenses */}
+                    {/* Smart Controls & Restrictions */}
                     <div
                         ref={businessCardRef}
                         className="bg-transparent rounded-xl overflow-hidden h-[313px]"
@@ -331,10 +330,9 @@ const BentoGrid = () => {
                         }}
                     >
                         <div className="p-6 text-white h-full relative">
-                            <h2 className="text-xl font-bold mb-2">Business Expenses</h2>
+                            <h2 className="text-xl font-bold mb-2">Smart Controls & Restrictions</h2>
                             <p className="text-gray-300 text-sm">
-                                Take complete control of your business expenses with CleverCards
-                                prepaid digital Mastercards.
+                                Define how, where, and when each card is used- control spend by merchant, category, geography, or time.
                             </p>
                             {/* Radial gradient for left card */}
                             <div className="absolute bottom-[0px] right-[0] w-[250px] h-[250px] bg-[radial-gradient(circle,rgba(255,255,255,0.15)_0%,transparent_60%)]" />
@@ -363,7 +361,7 @@ const BentoGrid = () => {
                         </div>
                     </div>
 
-                    {/* Employee Gift Cards */}
+                    {/* White-Label & API Integration */}
                     <div
                         ref={giftCardContainerRef}
                         className="bg-transparent rounded-xl overflow-hidden h-[427px]"
@@ -373,10 +371,9 @@ const BentoGrid = () => {
                     >
                         <div className="p-8 text-white h-full flex flex-col justify-between">
                             <div>
-                                <h2 className="text-xl font-bold mb-2">Employee Gift Cards</h2>
+                                <h2 className="text-xl font-bold mb-2">White-Label & API Integration</h2>
                                 <p className="text-gray-300 text-sm">
-                                    Boost your rewards program and lower taxes with CleverCard&apos;s
-                                    prepaid gift cards.
+                                    Embed CleverCards into your own platform with powerful APIs and white-label options to create your own branded payment solutions.
                                 </p>
                             </div>
                             <div className="flex justify-center relative h-96">
