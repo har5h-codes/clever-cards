@@ -14,7 +14,7 @@ interface PlatformCarouselProps {
 }
 
 const PlatformCard: React.FC<{ platformCase: PlatformCase }> = ({ platformCase }) => (
-  <div className=" rounded-[30px] flex flex-col w-[421px] h-[246px] border border-gray-700 p-6 shadow-lg">
+  <div className="rounded-[30px] flex flex-col w-[421px] h-[246px] border-b border-l border-r border-gray-300 p-6 shadow-lg">
     <h3 className="font-bold text-2xl text-white mb-4">{platformCase.title}</h3>
     <p className="text-gray-300 text-sm mb-6 flex-grow">
       {platformCase.description}
@@ -75,13 +75,13 @@ export const PlatformCarousel: React.FC<PlatformCarouselProps> = ({ cases }) => 
   }, [isHovering]);
 
   return (
-    <section className="w-full bg-[#13111A] py-16 mt-[100px]">
+    <section className="w-full bg-[#13111A]  sm:mt-[0px] lg:mt-[100px] lg:mb-[60px]">
       <div className="container min-w-screen px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 px-4">
             One Platform. Many Use Cases. Endless Possibilities
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto">
+          <p className="text-gray-300 max-w-3xl mx-auto text-sm md:text-base px-4">
             From paying employees, rewarding customers to paying businesses — the CleverCards Platform gives
             you the tools to move money instantly, securely, and with complete control.
           </p>
