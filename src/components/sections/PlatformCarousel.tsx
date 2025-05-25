@@ -75,7 +75,7 @@ export const PlatformCarousel: React.FC<PlatformCarouselProps> = ({ cases }) => 
   }, [isHovering]);
 
   return (
-    <section className="w-full bg-[#13111A] py-16">
+    <section className="w-full bg-[#13111A] py-16 mt-[100px]">
       <div className="container min-w-screen px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">

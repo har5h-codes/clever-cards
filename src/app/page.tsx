@@ -8,14 +8,14 @@ import Stats from "@/components/sections/Stats";
 import TrustSection from "@/components/sections/TrustSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import ProductDisplaySection from "@/components/sections/ProductDisplaySection";
-import ReferralSection from "@/components/sections/ReferralSection";
 import LandingPageSection from "@/components/sections/LandingPageSection";
 import GlobeBackground from "@/components/ui/GlobeBackground";
 import { useRef } from "react";
 // import WhyCleverCardSection from "@/components/sections/WhyCleverCardSection";
 import HeroSection from "@/components/sections/FasterToMarket";
-import UseCasesSection from "@/components/sections/UseCasesSection";
 import PlatformCarousel from "@/components/sections/PlatformCarousel";
+import Testimonial from "@/components/sections/Testimonial";
+import BelowBento from "@/components/sections/BelowBento";
 
 export default function Home() {
   // Globe config and arcs data (from GlobeDemo, but tailored for CleverCards)
@@ -83,9 +83,12 @@ export default function Home() {
           ref={statsRef}
         />
         <TrustSection/>
-        <PlatformCarousel />
-        <UseCasesSection />
         <HeroSection />
+        <BelowBento />
+        <Testimonial />
+        <PlatformCarousel />
+       
+        
         <ProductDisplaySection />
         <ReviewsSection />
         <LandingPageSection />
