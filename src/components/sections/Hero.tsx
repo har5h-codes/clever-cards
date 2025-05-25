@@ -21,8 +21,8 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
       
       {/* Main hero content */}
       <main className="z-10 flex flex-col items-center justify-center text-center px-4 h-screen">
-        <h1 className="text-6xl sm:text-7xl font-bold text-white mb-10 drop-shadow-[0_0_60px_rgba(168,85,247,0.8)] mx-44">
-        The Platform That Powers Global Payouts & Card Issuing. Instantly.
+        <h1 className="text-6xl sm:text-[4rem] font-bold text-white mb-10 drop-shadow-[0_0_60px_rgba(168,85,247,0.8)] mx-44">
+        The Platform That Powers Global <br /> Payouts & Card Issuing. Instantly.
         </h1>
         <h2 className="text-2xl sm:text-3xl text-white mb-2 font-semibold">
           Instant Payments. Zero Hassle.
@@ -32,8 +32,8 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
           <span className="whitespace-nowrap">reach recipients anywhere, anytime- with no banking details delays.</span>
         </p>
         <div className="flex gap-4 mb-12 flex-col sm:flex-row items-center justify-center">
-          <CustomButton size="lg">For Businesses</CustomButton>
-          <AnimatedButton>For Individuals</AnimatedButton>
+          <CustomButton size="lg">Contact Sales</CustomButton>
+          <AnimatedButton>Learn More</AnimatedButton>
         </div>
       </main>
     </div>
