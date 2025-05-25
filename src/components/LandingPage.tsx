@@ -36,7 +36,7 @@ const LandingPage = () => {
               Instant, Global and Effortless?
             </h2>
             <p className="text-white/80 text-lg max-w-4xl mx-auto mt-6">
-              Whether you're paying individuals or making business payments, the
+              Whether you&apos;re paying individuals or making business payments, the
               CleverCards Platform gives you everything you need to issue,
               manage, and control funds — instantly, securely, and at scale.
             </p>
