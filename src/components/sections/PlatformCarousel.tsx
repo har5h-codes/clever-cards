@@ -21,7 +21,7 @@ const PlatformCard: React.FC<{ platformCase: PlatformCase }> = ({ platformCase }
     </p>
     <a
       href={platformCase.learnMoreLink}
-      className="inline-flex items-center text-white bg-purple-600 hover:bg-purple-700 transition-colors px-4 py-2 rounded-md w-fit"
+      className="inline-flex items-center text-white bg-[#6F01FE] transition-colors px-4 py-2 rounded-full w-fit"
     >
       Learn More
       <svg
