@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TestimonialsSection() {
   return (
-    <div className="main-container w-[1100px] h-[670.59px] relative overflow-hidden mx-auto my-0 mt-[100px]">
+    <div className="main-container w-[1100px] h-[670.59px] relative overflow-hidden mx-auto my-0 mt-[50px]">
       {/* Header */}
       <div className="w-[477px] h-[51px] font-inter text-[42px] font-medium leading-[51px] tracking-[-1.68px] relative text-center whitespace-nowrap  mt-[3px] mr-0 mb-0 ml-[322px]">
         <span className="font-inter text-[42px] font-medium leading-[58.8px] text-white tracking-[-1.68px] relative text-center">
