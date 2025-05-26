@@ -33,7 +33,7 @@ const BelowBento: React.FC = () => {
           <div className="flex flex-col gap-2 p-4 rounded-lg transition-all duration-300 hover:bg-[#38294f] hover:border hover:border-solid hover:border-[#944bf2] hover:shadow-[0_0_164px_0_#6f01fe]">
             <div className="w-6 h-6 bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-05-25/Kui55G9emc.png)] bg-cover bg-no-repeat" />
             <span className="text-[1.1rem] font-medium leading-snug text-[#b7b7b7] hover:text-white transition-colors duration-300">
-            <span className='font-bold text-[1.2rem]'>Market Made</span> Made Easy, Quickly test and refine your offerings in the market.
+            <span className='font-bold text-[1.2rem]'>Market Testing</span> Made Easy, Quickly test and refine your offerings in the market.
             </span>
           </div>
 
