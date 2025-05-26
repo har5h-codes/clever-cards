@@ -16,7 +16,7 @@ const Endorsements = () => (
       />
     </div>
     <div className="text-center text-zinc-400 text-base font-medium mb-2">
-      Trusted by 10k companies, from startups to enterprises
+      Trusted by 15k companies, from startups to enterprises
     </div>
   </section>
 );
