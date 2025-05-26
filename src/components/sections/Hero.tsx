@@ -29,7 +29,7 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
         </h2>
         <p className="text-lg sm:text-xl text-zinc-200 mb-8 leading-snug">
           <span className="whitespace-nowrap">Issue branded digital Mastercards instantly. Configure spend, manage disbursements, and </span><br />
-          <span className="whitespace-nowrap">reach recipients anywhere, anytime- with no banking details or delays.</span>
+          <span className="whitespace-nowrap">reach recipients anywhere, anytime-with no banking details or delays.</span>
         </p>
         <div className="flex gap-4 mb-12 flex-col sm:flex-row items-center justify-center">
           <CustomButton size="lg">Contact Sales</CustomButton>
